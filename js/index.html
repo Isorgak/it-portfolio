@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isak Teklehaimanot | Frontend & Java Developer</title>
+    <meta name="description"
+        content="Professional portfolio of Isak Teklehaimanot - Frontend Developer and Java Developer with 5+ years of experience">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="gold">I</span>T
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="Lebenslauf_I.T.Teklehaimanot.pdf" download class="nav-cta">
+                <i class="fas fa-download"></i> Download CV
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-overlay"></div>
+
+        <!-- Floating Shapes -->
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+                <span class="hero-greeting">Hello, I'm</span>
+                <h1 class="hero-title">
+                    Isak <span class="gold">Teklehaimanot</span>
+                </h1>
+                <p class="hero-role">Frontend Developer</p>
+                <p class="hero-role-secondary">/ Java Developer</p>
+                <p class="hero-description">
+                    Crafting digital experiences with code and creativity.
+                    Specializing in modern web applications and enterprise software solutions.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#experience" class="btn btn-primary">
+                        <i class="fas fa-briefcase"></i> View My Work
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="image-container">
+                    <div class="image-glow"></div>
+                    <img src="images/profile.jpg" alt="Isak Teklehaimanot" class="profile-img">
+                    <div class="image-ring ring-1"></div>
+                    <div class="image-ring ring-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="bg-glow top"></div>
+        <div class="bg-glow bottom"></div>
+
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Get to Know Me</span>
+                <h2 class="section-title">About <span class="gold">Me</span></h2>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right" data-aos-delay="100">
+                    <p>
+                        I'm a passionate <strong>Frontend and Java Developer</strong> with over 5 years of experience
+                        building modern web applications and enterprise software solutions.
+                    </p>
+                    <p>
+                        My journey began in <strong>Eritrea</strong>, where I earned my Computer Science degree at the
+                        Eritrea Institute of Technology. Since then, I've worked across multiple countries, from
+                        creating movement monitoring systems to enterprise web applications for international clients.
+                    </p>
+                    <p>
+                        I specialize in creating <strong>clean, efficient code</strong> and intuitive user interfaces.
+                        My expertise spans the full development stack, from frontend technologies like React and
+                        JavaScript to backend systems with Java, Spring Boot, and Docker.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me exploring <span class="gold">photography</span>, <span
+                            class="gold">video editing</span>, and composing <span class="gold">electronic music</span>.
+                    </p>
+
+                    <div class="about-info">
+                        <div class="info-item">
+                            <span class="info-label">Location</span>
+                            <span class="info-value">Norderstedt, Germany</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Nationality</span>
+                            <span class="info-value">Eritrean</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Languages</span>
+                            <span class="info-value">German (B2), English, Tigrigna</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Availability</span>
+                            <span class="info-value gold">Open to opportunities</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-card" data-aos="flip-left" data-aos-delay="200">
+                        <i class="fas fa-calendar-alt stat-icon"></i>
+                        <div class="stat-number" data-count="5">0</div>
+                        <div class="stat-suffix">+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card" data-aos="flip-left" data-aos-delay="300">
+                        <i class="fas fa-award stat-icon"></i>
+                        <div class="stat-number" data-count="10">0</div>
+                        <div class="stat-suffix">+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card" data-aos="flip-left" data-aos-delay="400">
+                        <i class="fas fa-globe stat-icon"></i>
+                        <div class="stat-number" data-count="3">0</div>
+                        <div class="stat-suffix"></div>
+                        <div class="stat-label">Countries Worked</div>
+                    </div>
+                    <div class="stat-card" data-aos="flip-left" data-aos-delay="500">
+                        <i class="fas fa-heart stat-icon"></i>
+                        <div class="stat-number" data-count="100">0</div>
+                        <div class="stat-suffix">%</div>
+                        <div class="stat-label">Commitment</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="bg-glow"></div>
+
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">My Journey</span>
+                <h2 class="section-title">Professional <span class="gold">Experience</span></h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-line"></div>
+
+                <!-- Experience 1 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-card left">
+                        <div class="card-header">
+                            <span class="card-date"><i class="fas fa-calendar"></i> June 2025 - December 2025</span>
+                        </div>
+                        <h3 class="card-title">Frontend Developer (React & DevOps)</h3>
+                        <div class="card-company">
+                            <i class="fas fa-building"></i> velpTEC GmbH
+                            <span class="separator">|</span>
+                            <i class="fas fa-map-marker-alt"></i> Hamburg (Remote)
+                        </div>
+                        <p class="card-description">
+                            Advanced training in React for frontend development with focus on web applications. Acquired
+                            additional qualifications in Scrum and DevOps methodologies.
+                        </p>
+                        <ul class="card-highlights">
+                            <li><span></span> Modern web development with HTML5, CSS3, JavaScript, and React</li>
+                            <li><span></span> Responsive Web Design and UI/UX principles</li>
+                            <li><span></span> Git, GitHub, and modern development tools</li>
+                            <li><span></span> Scrum methodology and DevOps fundamentals</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-card right">
+                        <div class="card-header">
+                            <span class="card-date"><i class="fas fa-calendar"></i> March 2024 - August 2024</span>
+                        </div>
+                        <h3 class="card-title">Java Developer</h3>
+                        <div class="card-company">
+                            <i class="fas fa-building"></i> DAKOSY AG
+                            <span class="separator">|</span>
+                            <i class="fas fa-map-marker-alt"></i> Hamburg
+                        </div>
+                        <p class="card-description">
+                            Designed, developed and managed Java-based web applications for the logistics and supply
+                            chain industry.
+                        </p>
+                        <ul class="card-highlights">
+                            <li><span></span> Design, development and management of Java-based web applications</li>
+                            <li><span></span> Data compilation, analysis, and code reviews for debugging</li>
+                            <li><span></span> Implementation of performant and reliable code</li>
+                            <li><span></span> Collaboration with cross-functional teams</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-card left">
+                        <div class="card-header">
+                            <span class="card-date"><i class="fas fa-calendar"></i> February 2019 - January 2024</span>
+                        </div>
+                        <h3 class="card-title">Software Developer</h3>
+                        <div class="card-company">
+                            <i class="fas fa-building"></i> Wireless Logic mdex GmbH
+                            <span class="separator">|</span>
+                            <i class="fas fa-map-marker-alt"></i> Tangstedt
+                        </div>
+                        <p class="card-description">
+                            Full-stack development of enterprise web applications with focus on Java technologies and
+                            client-side development.
+                        </p>
+                        <ul class="card-highlights">
+                            <li><span></span> Client-side development and usability testing</li>
+                            <li><span></span> Java-based web application development</li>
+                            <li><span></span> Peer code reviews and European client collaboration</li>
+                            <li><span></span> Continuous improvement of software deployment processes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-card right">
+                        <div class="card-header">
+                            <span class="card-date"><i class="fas fa-calendar"></i> November 2017 - January 2019</span>
+                        </div>
+                        <h3 class="card-title">Programming Intern</h3>
+                        <div class="card-company">
+                            <i class="fas fa-building"></i> Wireless Logic mdex GmbH
+                            <span class="separator">|</span>
+                            <i class="fas fa-map-marker-alt"></i> Tangstedt
+                        </div>
+                        <p class="card-description">
+                            Hands-on experience with enterprise Java development, focusing on web applications and
+                            full-stack development.
+                        </p>
+                        <ul class="card-highlights">
+                            <li><span></span> Development with Java EE, JSF, PrimeFaces</li>
+                            <li><span></span> Maven build management and WildFly server</li>
+                            <li><span></span> Frontend development with AJAX and jQuery</li>
+                            <li><span></span> RESTful API integration and JSON data handling</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 5 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-card left">
+                        <div class="card-header">
+                            <span class="card-date"><i class="fas fa-calendar"></i> May 2017</span>
+                        </div>
+                        <h3 class="card-title">Programming Intern</h3>
+                        <div class="card-company">
+                            <i class="fas fa-building"></i> MKCL Deutschland GmbH
+                            <span class="separator">|</span>
+                            <i class="fas fa-map-marker-alt"></i> Bad Oldesloe
+                        </div>
+                        <p class="card-description">
+                            Developed user-friendly web applications using Python and Django, with a strong focus on
+                            efficient functionality.
+                        </p>
+                        <ul class="card-highlights">
+                            <li><span></span> Developed user-friendly using Python and Django</li>
+                            <li><span></span> Focused on creating intuitive and efficient user experiences</li>
+                            <li><span></span> Improved usability through clean UI structure and optimized functionality
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- Experience 6 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-card right">
+                        <div class="card-header">
+                            <span class="card-date"><i class="fas fa-calendar"></i> February 2015 - August 2015</span>
+                        </div>
+                        <h3 class="card-title">Photography & Graphic Design Specialist</h3>
+                        <div class="card-company">
+                            <i class="fas fa-building"></i> Samrawit Photo Studio
+                            <span class="separator">|</span>
+                            <i class="fas fa-map-marker-alt"></i> Khartoum
+                        </div>
+                        <p class="card-description">
+                            Creative multimedia professional specializing in photography, graphic design, and video
+                            production.
+                        </p>
+                        <ul class="card-highlights">
+                            <li><span></span> Conducted independent studio photo sessions</li>
+                            <li><span></span> Performed professional photo editing</li>
+                            <li><span></span> Applied advanced retouching techniques</li>
+                            <li><span></span> Designed custom client graphics</li>
+                            <li><span></span> Created banners, flyers, brochures</li>
+                            <li><span></span> Operated cameras for events</li>
+                            <li><span></span> Produced wedding and graduation videos</li>
+                            <li><span></span> Edited promotional marketing videos</li>
+                            <li><span></span> Applied modern video editing techniques</li>
+                            <li><span></span> Delivered high-quality visual projects</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 7 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-card left">
+                        <div class="card-header">
+                            <span class="card-date"><i class="fas fa-calendar"></i> June 2013 - September 2014</span>
+                        </div>
+                        <h3 class="card-title">Photography, Graphic Design, and IT Support Specialist</h3>
+                        <div class="card-company">
+                            <i class="fas fa-building"></i> Africana Photo Studio
+                            <span class="separator">|</span>
+                            <i class="fas fa-map-marker-alt"></i> Dekemhare
+                        </div>
+                        <p class="card-description">
+                            Multimedia specialist with experience in photography, graphic design, video production, and
+                            technical support.
+                        </p>
+                        <ul class="card-highlights">
+                            <li><span></span> Managed professional photo editing</li>
+                            <li><span></span> Conducted independent studio photoshoots</li>
+                            <li><span></span> Designed customized client graphics</li>
+                            <li><span></span> Created banners and brochures</li>
+                            <li><span></span> Created banners and brochures</li>
+                            <li><span></span> Operated cameras for events</li>
+                            <li><span></span> Covered weddings and graduations</li>
+                            <li><span></span> Edited marketing and event videos</li>
+                            <li><span></span> Used advanced editing software</li>
+                            <li><span></span> Maintained studio computer systems</li>
+                            <li><span></span> Performed hardware and software troubleshooting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 8 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-card right">
+                        <div class="card-header">
+                            <span class="card-date"><i class="fas fa-calendar"></i> September 2012 - May 2014</span>
+                        </div>
+                        <h3 class="card-title">Software Developer</h3>
+                        <div class="card-company">
+                            <i class="fas fa-building"></i> Public Library Asmara (Part-time)
+                            <span class="separator">|</span>
+                            <i class="fas fa-map-marker-alt"></i> Asmara
+                        </div>
+                        <p class="card-description">
+                            Developed a Motion Detection & Surveillance System using Java technologies and computer
+                            vision libraries.
+                        </p>
+                        <ul class="card-highlights">
+                            <li><span></span> Built system using Java Swing</li>
+                            <li><span></span> Implemented JDBC database connectivity</li>
+                            <li><span></span> Integrated JavaCV and OpenCV</li>
+                            <li><span></span> Developed real-time motion detection</li>
+                            <li><span></span> Designed desktop-based surveillance interface</li>
+                            <li><span></span> Managed video capture processing</li>
+                            <li><span></span> Stored data in database</li>
+                            <li><span></span> Applied object detection algorithms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="bg-glow left"></div>
+        <div class="bg-glow right"></div>
+
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">What I Bring</span>
+                <h2 class="section-title">Skills & <span class="gold">Expertise</span></h2>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <i class="fas fa-code category-icon"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="50"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="45"></div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="150">
+                    <div class="category-header">
+                        <i class="fas fa-laptop-code category-icon"></i>
+                        <h3>Frontend Technologies</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5 / CSS3 / SCSS</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JSF / PrimeFaces</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">jQuery</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="45"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header">
+                        <i class="fas fa-server category-icon"></i>
+                        <h3>Backend & Frameworks</h3>
+                    </div>
+                    <div class="skill-list">
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Jakarta EE</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JPA / Hibernate</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">REST / SOAP Web Services</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Spring Boot</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="50"></div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+
+                <!-- DevOps -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="250">
+                    <div class="category-header">
+                        <i class="fas fa-code-branch category-icon"></i>
+                        <h3>Tools & DevOps</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git / GitHub</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Docker</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Jenkins</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Kubernetes</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="50"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-header">
+                        <i class="fas fa-database category-icon"></i>
+                        <h3>Databases & ORM</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MySQL</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JDBC</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JPA</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IDEs -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="350">
+                    <div class="category-header">
+                        <i class="fas fa-terminal category-icon"></i>
+                        <h3>Build Tools & IDEs</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">IntelliJ IDEA</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">VS Code</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Maven</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Eclipse</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="50"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Summary -->
+            <div class="skills-summary" data-aos="fade-up" data-aos-delay="400">
+                <div class="summary-item">
+                    <div class="summary-number">25+</div>
+                    <div class="summary-label">Technologies</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-number">5+</div>
+                    <div class="summary-label">Years Coding</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-number">10+</div>
+                    <div class="summary-label">Projects</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-number">3</div>
+                    <div class="summary-label">Certifications</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="bg-glow top"></div>
+        <div class="bg-glow bottom"></div>
+
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Learning Path</span>
+                <h2 class="section-title">Education & <span class="gold">Certifications</span></h2>
+            </div>
+
+            <div class="education-list">
+
+                <!-- Degree -->
+                <div class="education-card degree" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-badge">Degree</div>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="card-details">
+                            <h3 class="card-title">B.Sc. in Computer Science</h3>
+                            <div class="card-meta">
+                                <span><i class="fas fa-university"></i> Eritrea Institute of Technology</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Mai-Nefhi, Eritrea</span>
+                                <span><i class="fas fa-calendar"></i> 2008 - 2012</span>
+                            </div>
+                            <p class="card-description">
+                                Completed a comprehensive Computer Science program covering software development,
+                                algorithms, systems architecture, networking, databases, artificial intelligence, and
+                                software engineering.
+                            </p>
+                            <ul class="card-list">
+                                <li><i class="fas fa-check-circle"></i> Strong foundation in Data Structures &
+                                    Algorithms</li>
+                                <li><i class="fas fa-check-circle"></i> Designed and analyzed efficient algorithms</li>
+                                <li><i class="fas fa-check-circle"></i> Applied Object-Oriented Programming (OOP)</li>
+                                <li><i class="fas fa-check-circle"></i> Studied Operating Systems & Computer
+                                    Architecture</li>
+                                <li><i class="fas fa-check-circle"></i> Implemented Database Systems (SQL & Data
+                                    Modeling)</li>
+                                <li><i class="fas fa-check-circle"></i> Developed web applicationss</li>
+                                <li><i class="fas fa-check-circle"></i> Applied Software Quality Assurance & Testing
+                                </li>
+                                <li><i class="fas fa-check-circle"></i> Worked with Networking & Security concepts</li>
+                                <li><i class="fas fa-check-circle"></i> Studied Artificial Intelligence fundamentals
+                                </li>
+                                <li><i class="fas fa-check-circle"></i> Built software using modern development tools
+                                </li>
+                                <li><i class="fas fa-check-circle"></i> Completed a full-scale Final Year Software
+                                    Project</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Certification 1 -->
+                <div class="education-card certification" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-badge">Certification</div>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="card-details">
+                            <h3 class="card-title">React Frontend Development with Scrum & DevOps</h3>
+                            <div class="card-meta">
+                                <span><i class="fas fa-building"></i> velpTEC GmbH</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Hamburg, Germany</span>
+                                <span><i class="fas fa-calendar"></i> 2025</span>
+                            </div>
+                            <p class="card-description">
+                                Modern web development with React, responsive design, UI/UX principles, Git/GitHub,
+                                Scrum, and DevOps fundamentals.
+                            </p>
+                            <ul class="card-list">
+                                <li><i class="fas fa-check-circle"></i> HTML5, CSS3, JavaScript & React</li>
+                                <li><i class="fas fa-check-circle"></i> Responsive Web Design & UI/UX</li>
+                                <li><i class="fas fa-check-circle"></i> Git, GitHub & Modern Dev Tools</li>
+                                <li><i class="fas fa-check-circle"></i> Scrum Methodology & DevOps</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certification 2 -->
+                <div class="education-card certification" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-badge">Certification</div>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="card-details">
+                            <h3 class="card-title">Certified Scrum Developer (CSD)</h3>
+                            <div class="card-meta">
+                                <span><i class="fas fa-building"></i> it-agile GmbH</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Hamburg, Germany</span>
+                                <span><i class="fas fa-calendar"></i> 2023</span>
+                            </div>
+                            <p class="card-description">
+                                Agile development practices, Scrum methodology, and team collaboration certification.
+                            </p>
+                            <ul class="card-list">
+                                <li><i class="fas fa-check-circle"></i> Agile Software Development</li>
+                                <li><i class="fas fa-check-circle"></i> Scrum Framework & Practices</li>
+                                <li><i class="fas fa-check-circle"></i> Team Collaboration</li>
+                                <li><i class="fas fa-check-circle"></i> Sprint Planning & Execution</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certification 3 -->
+                <div class="education-card certification" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-badge">Certification</div>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="card-details">
+                            <h3 class="card-title">Certified Java 8 / JDK8 Update</h3>
+                            <div class="card-meta">
+                                <span><i class="fas fa-building"></i> Integrata Cegos GmbH</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Hamburg, Germany</span>
+                                <span><i class="fas fa-calendar"></i> 2000</span>
+                            </div>
+                            <p class="card-description">
+                                Advanced Java programming with JDK 8 features and updates.
+                            </p>
+                            <ul class="card-list">
+                                <li><i class="fas fa-check-circle"></i> Java 8 New Features</li>
+                                <li><i class="fas fa-check-circle"></i> Lambda Expressions</li>
+                                <li><i class="fas fa-check-circle"></i> Stream API</li>
+                                <li><i class="fas fa-check-circle"></i> Functional Programming</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="bg-glow left"></div>
+        <div class="bg-glow right"></div>
+
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Let's Connect</span>
+                <h2 class="section-title">Get In <span class="gold">Touch</span></h2>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+                    <h3>Let's work together</h3>
+                    <p>I'm currently open to new opportunities and interesting projects. Whether you have a question or
+                        just want to say hi, feel free to reach out!</p>
+
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-details">
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Norderstedt, Germany</span>
+                            </div>
+                        </div>
+                        <a href="tel:+4915759068627" class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-details">
+                                <span class="info-label">Phone</span>
+                                <span class="info-value">+49 157 59068 627</span>
+                            </div>
+                        </a>
+                        <a href="mailto:isak.tseggai@t-online.de" class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-details">
+                                <span class="info-label">Email</span>
+                                <span class="info-value">isak.tseggai@t-online.de</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="social-links">
+                        <span class="social-label">Follow me on</span>
+                        <div class="social-icons">
+                            <a href="https://github.com/Isorgak" target="_blank" rel="noopener" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/isak-tseggai/" target="_blank" rel="noopener"
+                                aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.xing.com/profile/Isak_TsegaiTeklehaimanot/" target="_blank"
+                                rel="noopener" aria-label="Xing">
+                                <i class="fab fa-xing"></i>
+                            </a>
+                            <a href="mailto:isak.tseggai@t-online.de" aria-label="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper" data-aos="fade-left" data-aos-delay="200">
+
+
+
+                    <form action="https://formspree.io/f/mnjbkjbq" method="POST" class="contact-form" id="contactForm">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required placeholder=" ">
+                                <label for="name">Name *</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required placeholder=" ">
+                                <label for="email">Email *</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder=" ">
+                            <label for="subject">Subject</label>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Message *</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+
+                    </form>
+
+                    <!-- Success Message -->
+                    <div class="form-success" id="formSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Message Sent!</h4>
+                        <p>Thank you for reaching out. I'll get back to you soon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-glow"></div>
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="footer-logo">
+                    <span class="gold">I</span>T
+                </a>
+
+                <nav class="footer-nav">
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#education">Education</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+
+                <div class="footer-social">
+                    <a href="https://github.com/Isorgak" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/isak-tseggai/" target="_blank" rel="noopener"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.xing.com/profile/Isak_TsegaiTeklehaimanot/" target="_blank" rel="noopener"
+                        aria-label="Xing">
+                        <i class="fab fa-xing"></i>
+                    </a>
+
+                    <a href="mailto:isak.tseggai@t-online.de" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+
+                <div class="footer-divider"></div>
+
+                <div class="footer-bottom">
+                    <p>&copy; <span id="year"></span> Isak Teklehaimanot. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
