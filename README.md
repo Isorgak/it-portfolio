@@ -22,7 +22,7 @@ static-portfolio/
 │   └── main.js         # All JavaScript functionality
 ├── images/
 │   └── profile.jpg     # Your profile photo
-├── Lebenslauf_I.T.Teklehaimanot.pdf  # Your CV
+├── CV_I.T.Teklehaimanot.pdf  # Your CV
 └── README.md           # This file
 ```
 
@@ -72,7 +72,7 @@ static-portfolio/
 Replace `images/profile.jpg` with your own photo (recommended: 800x800px, square)
 
 ### Update CV
-Replace `Lebenslauf_I.T.Teklehaimanot.pdf` with your updated CV
+Replace `CV_I.T.Teklehaimanot.pdf` with your updated CV
 
 ### Edit Content
 Open `index.html` and modify the text in each section:
