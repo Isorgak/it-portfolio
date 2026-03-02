@@ -952,46 +952,41 @@
                     </div>
                 </div>
 
+                <!-- CONTACT FORM (Formspree) -->
                 <div class="contact-form-wrapper" data-aos="fade-left" data-aos-delay="200">
-
-
-
-                    <form action="https://formspree.io/f/mnjbkjbq" method="POST" class="contact-form" id="contactForm">
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" required placeholder=" ">
-                                <label for="name">Name *</label>
-                            </div>
-
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" required placeholder=" ">
-                                <label for="email">Email *</label>
-                            </div>
+                    <form class="contact-form" action="https://formspree.io/f/mnjbkjbq" method="POST"
+                        class="contact-form" id="contactForm">
+                        <!-- Email -->
+                        <div class="form-group">
+                            <input id="email" type="email" name="email" placeholder=" " required autocomplete="email" />
+                            <label for="email">Email *</label>
                         </div>
 
+                        <!-- subject -->
                         <div class="form-group">
                             <input type="text" id="subject" name="subject" placeholder=" ">
                             <label for="subject">Subject</label>
                         </div>
 
+                        <!-- Message -->
                         <div class="form-group">
-                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                            <textarea id="message" name="message" placeholder=" " required></textarea>
                             <label for="message">Message *</label>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-full">
-                            <i class="fas fa-paper-plane"></i> Send Message
+                        <button class="btn btn-primary btn-full btn-send" type="submit">
+                            <!-- Use any icon set you like. Example with Font Awesome: -->
+                            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                            <span>Send Message</span>
                         </button>
 
+                        <!-- Optional: success overlay (show via JS by adding .show) -->
+                        <div class="form-success" id="formSuccess">
+                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                            <h4>Message sent!</h4>
+                            <p>Thanks — I’ll get back to you soon.</p>
+                        </div>
                     </form>
-
-                    <!-- Success Message -->
-                    <div class="form-success" id="formSuccess">
-                        <i class="fas fa-check-circle"></i>
-                        <h4>Message Sent!</h4>
-                        <p>Thank you for reaching out. I'll get back to you soon.</p>
-                    </div>
                 </div>
             </div>
         </div>

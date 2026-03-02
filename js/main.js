@@ -3,7 +3,7 @@
  * Pure vanilla JavaScript - No frameworks
  */
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Initialize AOS Animation Library
     AOS.init({
         duration: 800,
@@ -23,21 +23,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Navbar scroll effect
     window.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
-        
+
         // Add/remove scrolled class
         if (currentScrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
-        
+
         // Hide/show on scroll direction
         if (currentScrollY > lastScrollY && currentScrollY > 100) {
             navbar.style.transform = 'translateY(-100%)';
         } else {
             navbar.style.transform = 'translateY(0)';
         }
-        
+
         lastScrollY = currentScrollY;
     }, { passive: true });
 
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function animateParticles() {
             frameCount++;
-            
+
             // Render every 2nd frame for performance
             if (frameCount % 2 === 0) {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // STATS COUNTER ANIMATION
     // ============================================
     const statNumbers = document.querySelectorAll('.stat-number');
-    
+
     const counterObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const steps = 60;
                 const increment = countTo / steps;
                 let current = 0;
-                
+
                 const timer = setInterval(() => {
                     current += increment;
                     if (current >= countTo) {
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         target.textContent = Math.floor(current);
                     }
                 }, duration / steps);
-                
+
                 counterObserver.unobserve(target);
             }
         });
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // SKILLS PROGRESS BAR ANIMATION
     // ============================================
     const skillBars = document.querySelectorAll('.skill-progress');
-    
+
     const skillObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -251,38 +251,44 @@ document.addEventListener('DOMContentLoaded', function() {
     const formSuccess = document.getElementById('formSuccess');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function (e) {
             e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // Simulate form submission
+
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
+
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                // Show success message
-                formSuccess.classList.add('show');
-                
-                // Reset form
-                contactForm.reset();
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-                
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                    formSuccess.classList.remove('show');
-                }, 5000);
-                
-                // Log form data (in real implementation, send to server)
-                console.log('Form submitted:', data);
-            }, 1500);
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: contactForm.method,
+                    body: new FormData(contactForm),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    formSuccess.classList.add('show');
+                    contactForm.reset();
+
+                    setTimeout(() => {
+                        formSuccess.classList.remove('show');
+                    }, 5000);
+                } else {
+                    alert("Something went wrong. Please try again.");
+                }
+
+            } catch (error) {
+                alert("Network error. Please try again.");
+            }
+
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
         });
     }
+
 
     // ============================================
     // BACK TO TOP BUTTON
@@ -318,12 +324,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // TIMELINE CARD INTERACTIONS
     // ============================================
     const timelineCards = document.querySelectorAll('.timeline-card');
-    
+
     timelineCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
             card.style.transform = 'translateY(-8px)';
         });
-        
+
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'translateY(0)';
         });
@@ -333,12 +339,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // SKILL CARD INTERACTIONS
     // ============================================
     const skillCategories = document.querySelectorAll('.skill-category');
-    
+
     skillCategories.forEach(category => {
         category.addEventListener('mouseenter', () => {
             category.style.transform = 'translateY(-5px)';
         });
-        
+
         category.addEventListener('mouseleave', () => {
             category.style.transform = 'translateY(0)';
         });
@@ -348,12 +354,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // EDUCATION CARD INTERACTIONS
     // ============================================
     const educationCards = document.querySelectorAll('.education-card');
-    
+
     educationCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
             card.style.transform = 'translateY(-5px)';
         });
-        
+
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'translateY(-3px)';
         });
@@ -363,12 +369,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // INFO CARD INTERACTIONS
     // ============================================
     const infoCards = document.querySelectorAll('.info-card');
-    
+
     infoCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
             card.style.transform = 'translateY(-5px)';
         });
-        
+
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'translateY(0)';
         });
@@ -378,13 +384,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // BUTTON RIPPLE EFFECT
     // ============================================
     const buttons = document.querySelectorAll('.btn');
-    
+
     buttons.forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             const rect = button.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            
+
             const ripple = document.createElement('span');
             ripple.style.cssText = `
                 position: absolute;
@@ -400,11 +406,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 margin-left: -50px;
                 margin-top: -50px;
             `;
-            
+
             button.style.position = 'relative';
             button.style.overflow = 'hidden';
             button.appendChild(ripple);
-            
+
             setTimeout(() => ripple.remove(), 600);
         });
     });

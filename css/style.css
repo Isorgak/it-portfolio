@@ -13,17 +13,19 @@
     --gold: #c9a962;
     --gold-rgb: 201, 169, 98;
     --border: #2a2a2a;
-    
+
     --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
     --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-    
+
     --transition-fast: 0.2s;
     --transition-normal: 0.3s;
     --transition-slow: 0.5s;
 }
 
 /* Reset & Base */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -244,8 +246,15 @@ img {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
-    50% { transform: translateY(-20px) rotate(var(--r, 0deg)); }
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(var(--r, 0deg));
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(var(--r, 0deg));
+    }
 }
 
 .hero-content {
@@ -368,8 +377,17 @@ img {
 }
 
 @keyframes pulse-glow {
-    0%, 100% { opacity: 0.5; transform: scale(1); }
-    50% { opacity: 0.8; transform: scale(1.05); }
+
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
 }
 
 .profile-img {
@@ -383,8 +401,15 @@ img {
 }
 
 @keyframes float-img {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .image-ring {
@@ -406,8 +431,13 @@ img {
 }
 
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Scroll Indicator */
@@ -449,8 +479,17 @@ img {
 }
 
 @keyframes scroll-wheel {
-    0%, 100% { transform: translateY(0); opacity: 1; }
-    50% { transform: translateY(8px); opacity: 0.5; }
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(8px);
+        opacity: 0.5;
+    }
 }
 
 /* ============================================
@@ -492,10 +531,25 @@ section {
     pointer-events: none;
 }
 
-.bg-glow.top { top: -100px; left: 25%; }
-.bg-glow.bottom { bottom: -100px; right: 25%; }
-.bg-glow.left { top: 25%; left: -100px; }
-.bg-glow.right { bottom: 25%; right: -100px; }
+.bg-glow.top {
+    top: -100px;
+    left: 25%;
+}
+
+.bg-glow.bottom {
+    bottom: -100px;
+    right: 25%;
+}
+
+.bg-glow.left {
+    top: 25%;
+    left: -100px;
+}
+
+.bg-glow.right {
+    bottom: 25%;
+    right: -100px;
+}
 
 /* ============================================
    ABOUT SECTION
@@ -839,9 +893,17 @@ section {
     transition: width 1s var(--ease-expo);
 }
 
-.skill-progress.advanced { background: var(--gold); }
-.skill-progress.intermediate { background: #eab308; }
-.skill-progress.basic { background: #3b82f6; }
+.skill-progress.advanced {
+    background: var(--gold);
+}
+
+.skill-progress.intermediate {
+    background: #eab308;
+}
+
+.skill-progress.basic {
+    background: #3b82f6;
+}
 
 /* Skills Summary */
 .skills-summary {
@@ -996,7 +1058,7 @@ section {
     margin-bottom: 1rem;
 }
 
-.contact-info > p {
+.contact-info>p {
     color: var(--text-secondary);
     margin-bottom: 2rem;
 }
@@ -1077,79 +1139,8 @@ section {
     transform: scale(1.1) rotate(5deg);
 }
 
-/* Contact Form */
-.contact-form-wrapper {
-    background: rgba(17, 17, 17, 0.8);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 2rem;
-    position: relative;
-}
+/* F
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-.form-group {
-    position: relative;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    background: transparent;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    color: var(--text-primary);
-    font-size: 0.95rem;
-    font-family: inherit;
-    transition: all var(--transition-fast);
-}
-
-.form-group textarea {
-    resize: none;
-    min-height: 120px;
-}
-
-.form-group label {
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    pointer-events: none;
-    transition: all var(--transition-fast);
-    background: var(--bg-secondary);
-    padding: 0 0.25rem;
-}
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group input:not(:placeholder-shown),
-.form-group textarea:not(:placeholder-shown) {
-    border-color: var(--gold);
-    outline: none;
-}
-
-.form-group input:focus + label,
-.form-group textarea:focus + label,
-.form-group input:not(:placeholder-shown) + label,
-.form-group textarea:not(:placeholder-shown) + label {
-    top: -0.5rem;
-    left: 0.75rem;
-    font-size: 0.75rem;
-    color: var(--gold);
-}
 
 /* Form Success */
 .form-success {
@@ -1187,6 +1178,137 @@ section {
 .form-success p {
     color: var(--text-secondary);
 }
+
+*/ .contact-form-wrapper {
+    background: rgba(17, 17, 17, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Keep your grid row if you later add name/phone etc. */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: all var(--transition-fast);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: none;
+    min-height: 140px;
+    /* closer to your screenshot */
+}
+
+/* Floating label */
+.form-group label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    pointer-events: none;
+    transition: all var(--transition-fast);
+    background: rgba(17, 17, 17, 0.95);
+    /* so it “cuts” the border nicely */
+    padding: 0 0.35rem;
+    border-radius: 6px;
+}
+
+/* Focus + filled states */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group input:not(:placeholder-shown),
+.form-group textarea:not(:placeholder-shown) {
+    border-color: var(--gold);
+}
+
+.form-group input:focus+label,
+.form-group textarea:focus+label,
+.form-group input:not(:placeholder-shown)+label,
+.form-group textarea:not(:placeholder-shown)+label {
+    top: -0.55rem;
+    left: 0.85rem;
+    font-size: 0.75rem;
+    color: var(--gold);
+}
+
+
+/* Optional: success overlay (your existing styles kept) */
+.form-success {
+    position: absolute;
+    inset: 0;
+    background: rgba(17, 17, 17, 0.98);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+}
+
+.form-success.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.form-success i {
+    font-size: 4rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.form-success h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.form-success p {
+    color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .contact-form-wrapper {
+        padding: 1.25rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* ============================================
    FOOTER
@@ -1357,96 +1479,97 @@ section {
         text-align: center;
         gap: 3rem;
     }
-    
+
     .hero-text {
         text-align: center;
     }
-    
+
     .hero-description {
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .hero-buttons {
         justify-content: center;
     }
-    
+
     .hero-image {
         order: -1;
     }
-    
+
     .image-container {
         width: 280px;
         height: 280px;
     }
-    
+
     .about-content,
     .contact-content {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    
+
     .timeline-line {
         left: 20px;
     }
-    
+
     .timeline-node {
         left: 20px;
     }
-    
+
     .timeline-card {
         width: calc(100% - 60px);
         margin-left: 50px !important;
     }
-    
+
     .skills-summary {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
+
     .nav-menu,
     .nav-cta {
         display: none;
     }
-    
+
     .nav-toggle {
         display: block;
     }
-    
+
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .hero-role {
         font-size: 1.25rem;
     }
-    
+
     .section-title {
         font-size: 2rem;
     }
-    
+
     .about-stats {
         grid-template-columns: 1fr 1fr;
     }
-    
+
     .skills-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .skills-summary {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
-    
+
     .card-list {
         grid-template-columns: 1fr;
     }
-    
+
     .form-row {
         grid-template-columns: 1fr;
     }
-    
+
     .about-info {
         grid-template-columns: 1fr;
     }
@@ -1456,24 +1579,24 @@ section {
     .hero-title {
         font-size: 2rem;
     }
-    
+
     .image-container {
         width: 220px;
         height: 220px;
     }
-    
+
     .stat-card {
         padding: 1rem;
     }
-    
+
     .stat-number {
         font-size: 2rem;
     }
-    
+
     .skills-summary {
         grid-template-columns: 1fr 1fr;
     }
-    
+
     .summary-number {
         font-size: 1.5rem;
     }
@@ -1483,8 +1606,15 @@ section {
    ANIMATIONS & EFFECTS
    ============================================ */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .fade-in {
@@ -1517,7 +1647,10 @@ section {
 
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
